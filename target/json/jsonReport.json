@@ -1,0 +1,209 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-06-23T09:07:44.215Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.visionit.automation.core.WebDriverFactory.getWebDriverForBrowser(WebDriverFactory.java:38)\r\n\tat com.visionit.automation.stepdefs.StepDefs.setUp(StepDefs.java:52)\r\n",
+              "duration": 1728000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User open the browser and navigate to Url and search for product",
+        "description": "",
+        "id": "e-commerce-website-health-check;user-open-the-browser-and-navigate-to-url-and-search-for-product",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.visionit.automation.core.WebDriverFactory.quitTheBrowser(WebDriverFactory.java:54)\r\n\tat com.visionit.automation.stepdefs.StepDefs.tearDown(StepDefs.java:63)\r\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "navigate to url and open the home page",
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.navigate_to_url_and_open_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user search for product \"Laptop\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Laptop\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.visionit.automation.stepdefs.StepDefs.user_search_for_product(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "search result should display",
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.search_result_should_display()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui"
+          },
+          {
+            "name": "@healthCheck"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-06-23T09:07:46.357Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.visionit.automation.core.WebDriverFactory.getWebDriverForBrowser(WebDriverFactory.java:38)\r\n\tat com.visionit.automation.stepdefs.StepDefs.setUp(StepDefs.java:52)\r\n",
+              "duration": 19000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.setUp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "user click on desired product and check the product details",
+        "description": "",
+        "id": "e-commerce-website-health-check;user-click-on-desired-product-and-check-the-product-details",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.visionit.automation.core.WebDriverFactory.quitTheBrowser(WebDriverFactory.java:54)\r\n\tat com.visionit.automation.stepdefs.StepDefs.tearDown(StepDefs.java:63)\r\n",
+              "duration": 1000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "navigate to url and open the home page",
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.navigate_to_url_and_open_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "user search for product \"earphone\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"earphone\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.visionit.automation.stepdefs.StepDefs.user_search_for_product(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "user click on desired product",
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.user_click_on_desired_product()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "product description shown on new tab",
+            "match": {
+              "location": "com.visionit.automation.stepdefs.StepDefs.product_description_shown_on_new_tab()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui"
+          },
+          {
+            "name": "@healthCheck"
+          }
+        ]
+      }
+    ],
+    "name": "E-Commerce website health check",
+    "description": "",
+    "id": "e-commerce-website-health-check",
+    "keyword": "Feature",
+    "uri": "classpath:Features/healthCheck.feature",
+    "tags": [
+      {
+        "name": "@ui",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@healthCheck",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 5
+        }
+      }
+    ]
+  }
+]
