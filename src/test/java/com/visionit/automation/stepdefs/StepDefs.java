@@ -1,5 +1,7 @@
 package com.visionit.automation.stepdefs;
 import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import com.visionit.automation.core.WebDriverFactory;
 import com.visionit.automation.pageobjects.CommonPageObject;
@@ -41,12 +43,32 @@ public class StepDefs {
 		searchPageObject =new SearchPageObjects(driver,scn);
 		prodDescriptionObject= new ProductDescriptionPageObjects(driver,scn);
 	}
-	@After
+	
+	//Capture screenshot if test case get failed
+	@After(order=2)
+	public void captureScreenshot(Scenario scn)
+	{
+		if(scn.isFailed())
+		{
+			TakesScreenshot srnshot= ((TakesScreenshot)driver);
+			byte [] data =srnshot.getScreenshotAs(OutputType.BYTES);
+			scn.attach(data, "image/png", "Name of failed step is: "+ scn.getName());
+			scn.log("Attach a screenshot as step get failed");
+		}
+		else
+		{
+			scn.log("Test case get passed, no screenshot is captured");
+		}
+	}
+	
+	//Close the browser
+	@After(order=1)
 	public void tearDown()
 	{
 		WebDriverFactory.quitTheBrowser();
 		scn.log("Browser is quit");
 	}
+	
 
 	@Given("navigate to url and open the home page")
 	public void navigate_to_url_and_open_the_home_page() {
@@ -75,5 +97,15 @@ public class StepDefs {
 		prodDescriptionObject.validateProductTitle();
 		prodDescriptionObject.validateAddToCartBtn();
 	}
+
+    @When("user search product {string}")
+    public void user_search_product(String product_name) {
+    	cmnPageObject.setSearchBox(product_name);
+    	cmnPageObject.clickOnSearchBtn();
+    	
+   
+    }
+
+
 
 }

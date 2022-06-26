@@ -33,12 +33,11 @@ public class SearchPageObjects {
 	//Method to validate search page title
 	public void validateSearchPageTitle()
 	{
-		String expSearchPageTitle= "Amazon.in : Laptop";
 		WebDriverWait wait= new WebDriverWait(driver,20);
-		boolean actTitle =wait.until(ExpectedConditions.titleIs(expSearchPageTitle));
+		boolean actTitle =wait.until(ExpectedConditions.titleContains("Amazon.in"));
 		Assert.assertEquals(true, actTitle);
-		logger.info("Validate search page title is : "+expSearchPageTitle );
-		scn.log("Validate search page title is : "+expSearchPageTitle);
+		logger.info("Validate search page title is : "+driver.getTitle());
+		scn.log("Validate search page title is : "+driver.getTitle());
 	}
 
 	//method to click on desired product from suggested product lists
